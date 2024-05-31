@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn,faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const ContactContainer = styled.div`
   display: flex;
@@ -43,15 +43,18 @@ const Label = styled.label`
 const Input = styled.input`
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   width: 90%;
+  height: 20px;
+  font-size:17px;
+  
 `;
 
 const TextArea = styled.textarea`
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  width:90%;
+  border-radius: 5px;
+  width:96%;
 `;
 
 const Button = styled.button`
@@ -162,6 +165,9 @@ const ContactPage = () => {
   </SocialMediaLink>
   <SocialMediaLink href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faLinkedinIn} />
+  </SocialMediaLink>
+  <SocialMediaLink href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faWhatsapp} />
   </SocialMediaLink>
 </SocialMediaLinks>
     </ContactContainer>
