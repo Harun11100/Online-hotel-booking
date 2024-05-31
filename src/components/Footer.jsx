@@ -33,18 +33,17 @@ const Footer = () => (
     <FooterContainer>
         <FooterSection>
             <h4>Customer Support</h4>
-            <p>Email: support@tajhotels.com</p>
+            <p>Email: support@harunovhotel.com</p>
             <p>Phone: 800-123-4567</p>
         </FooterSection>
         <FooterSection>
             <h4>Hotel Locations</h4>
+            <p>kashimpur</p>
             <p>Gazipur</p>
-            <p>Udaipur</p>
             <p>Dhaka</p>
-            <p>and many more...</p>
         </FooterSection>
         <FooterSection>
-            <p>&copy; 2024 Hotels. All rights reserved.</p>
+            <p>&copy; 2024 Harunovhotels. All rights reserved.</p>
         </FooterSection>
     </FooterContainer>
 );

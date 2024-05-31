@@ -9,6 +9,7 @@ import Modal from './components/Modal';
 import BookingForm from './components/BookingForm';
 import { SupabaseProvider, useSupabase } from './assets/context/SupabaseContext';
 import Spinner from './components/Spinner';
+import ContactPage from './components/contactPage';
 
 const Content = styled.div`
     display: flex;
@@ -56,8 +57,12 @@ const Cards = () => {
     );
 };
 
-const App = () => (
-    <SupabaseProvider>
+function App() {
+
+// if(loading)return<Spinner/> 
+
+    return (
+        <SupabaseProvider>
         <Router>
             <div>
                 <Navbar />
@@ -65,12 +70,16 @@ const App = () => (
                     <Routes>
                         <Route path="/" element={<Cards />} />
                         <Route path="/booking" element={<BookingForm />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        
                     </Routes>
                 </Content>
                 <Footer />
             </div>
         </Router>
     </SupabaseProvider>
-);
+    )
+}
+
 
 export default App;

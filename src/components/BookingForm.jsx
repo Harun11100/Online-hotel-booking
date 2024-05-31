@@ -16,6 +16,7 @@ const FormContainer = styled.div`
   padding: 80px;
   background-color: #e4d49e;
   font-family: "Poppins", sans-serif;
+  width: 100%;
 `;
 
 const Form = styled.form`

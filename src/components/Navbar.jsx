@@ -32,8 +32,6 @@ const Navbar = () => (
     </div>
     <div className="nav-links">
       <NavLink to="/about">About</NavLink>
-      <NavLink to="/destinations">Destinations</NavLink>
-      <NavLink to="/offers">Offers</NavLink>
       <NavLink to="/contact">Contact</NavLink>
       <NavLink to="/booking">Booking</NavLink>
     </div>
