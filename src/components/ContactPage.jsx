@@ -42,7 +42,9 @@ const Label = styled.label`
 
 const Input = styled.input`
   padding: 10px;
-  border: 1px solid #ccc;
+  margin-left:6px;
+  border: none;
+  background-color:#cdcdc187;
   border-radius: 5px;
   width: 90%;
   height: 20px;
@@ -52,9 +54,11 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   padding: 10px;
-  border: 1px solid #ccc;
+  border:none;
+  background-color:#cdcdc187;
   border-radius: 5px;
   width:96%;
+  padding: 10px;
 `;
 
 const Button = styled.button`

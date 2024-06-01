@@ -6,6 +6,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 import { useState } from 'react';
 import styled from 'styled-components';
 import { useSearchParams } from 'react-router-dom';
+import Payment from './Payment';
 
 
 
@@ -31,6 +32,7 @@ const FormGroup = styled.div`
   flex-direction: column;
   width: 48%;
   margin-bottom: 10px;
+  
 `;
 
 const Label = styled.label`
@@ -46,7 +48,8 @@ const Input = styled.input`
 
 const Button = styled.button`
   padding: 10px 20px;
-  background-color: #ffffff;
+      background-color: #4CAF50;
+  
   color: #ffef5d;
   border: none;
   border-radius: 4px;
@@ -242,6 +245,10 @@ const BookingForm = () => {
             required
           />
         </FormGroup>
+        <div>
+       To confirm pay with metamask
+       <Payment/>
+       </div>
 
         <Button type="submit">Book Now</Button>
       </Form>

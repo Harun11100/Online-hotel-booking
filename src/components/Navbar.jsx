@@ -8,7 +8,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
-  background-image: url('/image/022.jpg');  /* Correct path */
+   background-image:url("image/header.jpeg");
   background-size: cover;
   background-position: center;
   font-family:"Poppins", sans-serif;
@@ -16,7 +16,8 @@ const NavbarContainer = styled.div`
 `;
 
 const NavLink = styled(Link)`
-  color: #fdfdfd;
+  color: #ffffff;
+  font-weight:10px;
   text-decoration: none;
   padding: 8px 16px;
   font-family: "Poppins", sans-serif;
@@ -24,11 +25,18 @@ const NavLink = styled(Link)`
     text-decoration: underline;
   }
 `;
+const Title= styled.h1`
+font-family:Georgia, 'Times New Roman', Times, serif;
+color:goldenrod;
+
+`
 
 const Navbar = () => (
   <NavbarContainer>
     <div className="logo">
-      <Logo />  {/* Use the Logo component */}
+      <Logo />
+      <Title>Харунов hotel</Title>
+     
     </div>
     <div className="nav-links">
       <NavLink to="/about">About</NavLink>

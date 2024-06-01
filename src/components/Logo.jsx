@@ -13,7 +13,7 @@ const LogoImage = styled.img`
 // Create a Logo component that links to the homepage
 const Logo = () => (
   <Link to="/">
-    <LogoImage src="/image/logo-light.png" alt="Hotel Logo" />
+    <LogoImage src="/image/logo-light.jpeg" alt="Hotel Logo" />
   </Link>
 );
 

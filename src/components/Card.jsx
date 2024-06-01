@@ -1,8 +1,7 @@
-// src/components/Card.jsx
-
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+
 
 const CardContainer = styled.div`
   border: 1px solid #ddd;
@@ -35,17 +34,20 @@ const CardLink = styled.button`
   padding: 10px 20px;
   background-color: #b89d42;
   color: white;
-  text-decoration: none;
+  text-decoration:none;
   border: none;
   border-radius: 5px;
-  flex-grow: 1;
-  text-align: center;
+  /* flex-grow: 1; */
+  /* text-align: center; */
+  
   cursor: pointer;
 
   &:hover {
     background-color: #9c7b33;
   }
 `;
+
+
 
 const ImageButton = styled.button`
   display: block;
@@ -78,6 +80,20 @@ const StyledDescription = styled.p`
   font-size: 16px;
 `;
 
+const ToggleButton = styled.button`
+  background: none;
+  border: none;
+  color:#b89d42;
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
@@ -105,6 +121,7 @@ const ModalImage = styled.img`
 const Card = ({ image, title, discount, description, price, cabinId }) => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const handleBookNowClick = () => {
     navigate(`/booking?cabinId=${cabinId}&price=${price}`);
@@ -120,6 +137,13 @@ const Card = ({ image, title, discount, description, price, cabinId }) => {
     }
   };
 
+
+
+  const truncateText = (text, length) => {
+    if (text.length <= length) return text;
+    return text.substring(0, length) + '...';
+  };
+
   return (
     <CardContainer>
       <ImageButton onClick={openModal}>
@@ -131,9 +155,15 @@ const Card = ({ image, title, discount, description, price, cabinId }) => {
           <span>{discount !== 0 ? `Discount: $${discount}` : ''}</span>
           <span>Price: ${price}</span>
         </TitleWithPrice>
-        <StyledDescription>{description}</StyledDescription>
+        <StyledDescription>
+          {isDescriptionExpanded ? description : truncateText(description, 50)}
+          <ToggleButton onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}>
+            {isDescriptionExpanded ? 'Show Less' : 'Show More'}
+          </ToggleButton>
+        </StyledDescription>
         <CardFooter>
-          <CardLink onClick={handleBookNowClick}>Book Now</CardLink>
+          <CardLink onClick={handleBookNowClick}><span>Book Now</span></CardLink>
+         
         </CardFooter>
       </CardBody>
       {isModalOpen && (

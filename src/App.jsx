@@ -10,6 +10,7 @@ import BookingForm from './components/BookingForm';
 import { SupabaseProvider, useSupabase } from './assets/context/SupabaseContext';
 import Spinner from './components/Spinner';
 import ContactPage from './components/contactPage';
+import About from './components/About';
 
 const Content = styled.div`
     display: flex;
@@ -71,6 +72,8 @@ function App() {
                         <Route path="/" element={<Cards />} />
                         <Route path="/booking" element={<BookingForm />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/about" element={<About />} />
+
                         
                     </Routes>
                 </Content>
