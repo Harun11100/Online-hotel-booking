@@ -58,7 +58,8 @@ const Payment = () => {
       <button className="payment-button" onClick={connectMetaMask}>
         {account ? 'Connected' : 'Connect MetaMask'}
       </button>
-      <button className="payment-button" onClick={sendTransaction} disabled={!account}>
+      <button className="payment-button" onClick={sendTransaction} 
+      >
         Pay with MetaMask
       </button>
       {transactionHash && (

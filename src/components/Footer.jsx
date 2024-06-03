@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-    background-color: #e8f6fc;
+    background-color: #f9f6e8;
     padding: 20px;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -33,7 +33,7 @@ const Footer = () => (
     <FooterContainer>
         <FooterSection>
             <h4>Customer Support</h4>
-            <p>Email: support@harunovhotel.com</p>
+            <p>Email: support@xapyнoвhotel.com</p>
             <p>Phone: 800-123-4567</p>
         </FooterSection>
         <FooterSection>
@@ -43,7 +43,7 @@ const Footer = () => (
             <p>Dhaka</p>
         </FooterSection>
         <FooterSection>
-            <p>&copy; 2024 Harunovhotels. All rights reserved.</p>
+            <p>&copy; 2024 Харунов hotel. All rights reserved.</p>
         </FooterSection>
     </FooterContainer>
 );
